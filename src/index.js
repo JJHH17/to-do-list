@@ -58,12 +58,23 @@ function createProjectModal() {
     // Adds submit button
     const submitProject = document.createElement("button");
     submitProject.type = "button";
+    submitProject.id = "submitProject";
     submitProject.textContent = "Add";
     projectForm.appendChild(submitProject);
 }
 
+// Used to select "submit project" button
+function submitProjectBtnSelect() {
+    const submitProjectBtn = document.querySelector("#submitProject");
+    return submitProjectBtn;
+}
+
 // Handles button click
 AddProjectBtnSelect().addEventListener("click", () => {
-    // Creates modal on click 
-    createProjectModal();
+    if (!document.querySelector("#projectFormContainer")) {
+        // Creates modal on click (if it doesn't already exist)
+        createProjectModal();
+    } else {
+        alert("Please fill out the project form");
+    }
 });
