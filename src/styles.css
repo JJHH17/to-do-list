@@ -1,3 +1,18 @@
 * {
-    background-color: pink;
+    margin: 0px;
+}
+
+#title {
+    text-align: center;
+}
+
+#pageContainer {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 550px;
+}
+
+#sidebar {
+    border: 1px solid black;
+    text-align: center;
 }
