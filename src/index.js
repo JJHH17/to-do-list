@@ -1,20 +1,8 @@
 import "./styles.css";
+import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect } from "./elementSelectors";
 
 // Stores list of projects for display
 let projects = [];
-
-// Add project button
-// Select the add project button
-function AddProjectBtnSelect() {
-    const addProjectBtn = document.querySelector("#addProject");
-    return addProjectBtn;
-}
-
-// Selects main div of page
-function pageContainerSelect() {
-    const pageContainer = document.querySelector("#pageContainer");
-    return pageContainer;
-}
 
 // Create modal for when button is clicked
 function createProjectModal() {
@@ -61,12 +49,6 @@ function createProjectModal() {
     submitProject.id = "submitProject";
     submitProject.textContent = "Add";
     projectForm.appendChild(submitProject);
-}
-
-// Used to select "submit project" button
-function submitProjectBtnSelect() {
-    const submitProjectBtn = document.querySelector("#submitProject");
-    return submitProjectBtn;
 }
 
 // Handles button click
