@@ -16,3 +16,8 @@
     border: 1px solid black;
     text-align: center;
 }
+
+#addProject {
+    display: flex;
+    justify-self: center;
+}
