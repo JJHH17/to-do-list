@@ -24,3 +24,9 @@ export function sidebarSelect() {
     const sidebar = document.querySelector("#sidebar");
     return sidebar;
 }
+
+// Selects project holder elements
+export function projectHolderSelect() {
+    const projectHolder = document.querySelector(".projectHolder");
+    return projectHolder;
+}
