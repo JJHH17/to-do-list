@@ -54,6 +54,9 @@ export function createProjectModal() {
     submitProjectBtnSelect().addEventListener("click", () => {
         // Creates project object
         let newProject = createProject(projectTitleInput.value, projectDescInput.value);
+        // Removes modal
+        containerForm.remove();
+        // Displays project on sidebar
         renderToSidebar();
     });
 }
