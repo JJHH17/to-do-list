@@ -1,17 +1,10 @@
 import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect } from "./elementSelectors";
-
-// Handle "submit project" button, creates project object
-function createProjectButton() {
-    submitProjectBtnSelect().addEventListener("click", () => {
-        alert("Hello");
-    });
-}
+import { createProject, projects } from "./createProject";
 
 // Create modal for when button is clicked
 export function createProjectModal() {
     // Creates a parent div containing form, appends to page 
     const containerForm = document.createElement("div");
-    containerForm.id = "containerForm";
     // Styling and positioning 
     containerForm.style.position = "absolute";
     containerForm.style.left = "50%";
@@ -35,6 +28,7 @@ export function createProjectModal() {
 
     // Creates input for title
     const projectTitleInput = document.createElement("input");
+    projectTitleInput.type = "text";
     projectForm.appendChild(projectTitleInput);
 
     // Creates description of project
@@ -44,6 +38,7 @@ export function createProjectModal() {
 
     // Creates input for description
     const projectDescInput = document.createElement("input");
+    projectDescInput.type = "text";
     projectForm.appendChild(projectDescInput);
 
     // Adds submit button
@@ -53,6 +48,11 @@ export function createProjectModal() {
     submitProject.textContent = "Add";
     projectForm.appendChild(submitProject);
 
-    // Calls "submit project" function when button click occurs
-    createProjectButton();
+
+    // Handle "submit project" button, creates project object
+    submitProjectBtnSelect().addEventListener("click", () => {
+        // Creates project object
+        let newProject = createProject(projectTitleInput.value, projectDescInput.value);
+        console.log(projects);
+    });
 }
