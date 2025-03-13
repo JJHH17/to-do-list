@@ -1,3 +1,7 @@
+import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sidebarSelect } from "./elementSelectors";
+import { createProjectModal } from "./createProjectModal";
+import { renderToSidebar } from "./sidebarRender";
+
 
 // Stores list of projects for display
 export let projects = [];

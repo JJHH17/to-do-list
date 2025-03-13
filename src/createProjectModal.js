@@ -1,6 +1,6 @@
-import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect } from "./elementSelectors";
+import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sidebarSelect } from "./elementSelectors";
 import { createProject, projects } from "./createProject";
-import { renderToSidebar } from "./index";
+import { renderToSidebar } from "./sidebarRender";
 
 // Create modal for when button is clicked
 export function createProjectModal() {
