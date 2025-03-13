@@ -21,9 +21,19 @@ export function renderToSidebar() {
         // Appends to sidebar
         sidebar.appendChild(projectDiv);
 
-        // We'll allow divs to be clickable here and highlight when hover
+        // We'll allow divs to be clickable here 
         projectDiv.addEventListener("click", () => {
             renderProject(index);
+        });
+
+        // We'll allow divs to change colour when hovered over
+        projectDiv.addEventListener("mouseover", () => {
+            projectDiv.style.backgroundColor = "pink";
+        });
+
+        // Reverts back to default colour when mouse leaves div
+        projectDiv.addEventListener("mouseleave", () => {
+            projectDiv.style.backgroundColor = "";
         });
     });
 }
