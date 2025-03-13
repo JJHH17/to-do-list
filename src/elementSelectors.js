@@ -30,3 +30,9 @@ export function projectHolderSelect() {
     const projectHolder = document.querySelector(".projectHolder");
     return projectHolder;
 }
+
+// Selects center div/element on page
+export function mainContentSelect() {
+    const mainContent = document.querySelector("#mainContent");
+    return mainContent;
+}

@@ -1,7 +1,8 @@
 import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sidebarSelect } from "./elementSelectors";
 import { createProjectModal } from "./createProjectModal";
 import { createProject, projects } from "./createProject";
-
+import { renderProject } from "./projectLoader";
+ 
 // Responsible for rendering items to sidebar when projects are created
 // Allows user to click item, which is then expanded to center of page
 
@@ -22,7 +23,7 @@ export function renderToSidebar() {
 
         // We'll allow divs to be clickable here and highlight when hover
         projectDiv.addEventListener("click", () => {
-            alert("Hello");
-        })
+            renderProject(index);
+        });
     });
 }
