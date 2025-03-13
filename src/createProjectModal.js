@@ -1,5 +1,12 @@
 import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect } from "./elementSelectors";
 
+// Handle "submit project" button, creates project object
+function createProjectButton() {
+    submitProjectBtnSelect().addEventListener("click", () => {
+        alert("Hello");
+    });
+}
+
 // Create modal for when button is clicked
 export function createProjectModal() {
     // Creates a parent div containing form, appends to page 
@@ -45,4 +52,7 @@ export function createProjectModal() {
     submitProject.id = "submitProject";
     submitProject.textContent = "Add";
     projectForm.appendChild(submitProject);
+
+    // Calls "submit project" function when button click occurs
+    createProjectButton();
 }

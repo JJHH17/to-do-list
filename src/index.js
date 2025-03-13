@@ -1,6 +1,6 @@
 import "./styles.css";
 import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect } from "./elementSelectors";
-import { createProjectModal } from "./createProjectModal";
+import { createProjectModal, submitProject } from "./createProjectModal";
 
 // Stores list of projects for display
 let projects = [];
@@ -14,3 +14,11 @@ AddProjectBtnSelect().addEventListener("click", () => {
         alert("Please fill out the project form");
     }
 });
+
+// Create the "make a project" function, which is an object
+function createProject(title, description) {
+    // Create the project object and to do array
+    let project = { title, description, toDo: [] };
+    // Pushes into the array of projects
+    projects.push(project);
+}
