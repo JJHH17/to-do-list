@@ -1,5 +1,6 @@
 import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect } from "./elementSelectors";
 import { createProject, projects } from "./createProject";
+import { renderToSidebar } from "./index";
 
 // Create modal for when button is clicked
 export function createProjectModal() {
@@ -53,6 +54,6 @@ export function createProjectModal() {
     submitProjectBtnSelect().addEventListener("click", () => {
         // Creates project object
         let newProject = createProject(projectTitleInput.value, projectDescInput.value);
-        console.log(projects);
+        renderToSidebar();
     });
 }

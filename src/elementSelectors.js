@@ -18,3 +18,9 @@ export function submitProjectBtnSelect() {
     const submitProjectBtn = document.querySelector("#submitProject");
     return submitProjectBtn;
 }
+
+// Selects sidebar element
+export function sidebarSelect() {
+    const sidebar = document.querySelector("#sidebar");
+    return sidebar;
+}
