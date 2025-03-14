@@ -2,6 +2,14 @@ import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sideb
 import { createProject, projects } from "./createProject";
 import { renderToSidebar } from "./sidebarRender";
 
+// Removes project modal
+export function removeProjectModal() {
+    const existingmodal = document.querySelector("#projectFormContainer");
+    if (existingmodal) {
+        existingmodal.remove();
+    };
+}
+
 // Create modal for when button is clicked
 export function createProjectModal() {
     // Creates a parent div containing div, appends to page 

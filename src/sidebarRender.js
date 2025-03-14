@@ -1,5 +1,5 @@
 import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sidebarSelect } from "./elementSelectors";
-import { createProjectModal } from "./createProjectModal";
+import { createProjectModal, removeProjectModal } from "./createProjectModal";
 import { createProject, projects } from "./createProject";
 import { renderProject } from "./projectLoader";
 import { toDoButton, toDoModal, removeToDoButton, removeToDoModal } from "./createToDoModal";
@@ -25,6 +25,8 @@ export function renderToSidebar() {
         // We'll allow divs to be clickable here 
         projectDiv.addEventListener("click", () => {
             renderProject(index);
+            // Removes "Create project" modal if exists
+            removeProjectModal();
             // Removes "To do" modal if exists
             removeToDoModal();
             // Displays create project button
