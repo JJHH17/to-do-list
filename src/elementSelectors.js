@@ -36,3 +36,13 @@ export function mainContentSelect() {
     const mainContent = document.querySelector("#mainContent");
     return mainContent;
 }
+
+export function createToDos() {
+    const createToDo = document.querySelector("#createToDo");
+    return createToDo;
+}
+
+export function creatorButtonSelect() {
+    const creatorButtons = document.querySelector("#creatorButtons");
+    return creatorButtons;
+}

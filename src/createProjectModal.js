@@ -4,7 +4,7 @@ import { renderToSidebar } from "./sidebarRender";
 
 // Create modal for when button is clicked
 export function createProjectModal() {
-    // Creates a parent div containing form, appends to page 
+    // Creates a parent div containing div, appends to page 
     const containerForm = document.createElement("div");
     // Styling and positioning 
     containerForm.style.position = "absolute";

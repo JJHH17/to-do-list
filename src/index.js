@@ -1,5 +1,5 @@
 import "./styles.css";
-import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sidebarSelect, projectHolderSelect } from "./elementSelectors";
+import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sidebarSelect, projectHolderSelect, mainContentSelect } from "./elementSelectors";
 import { createProjectModal } from "./createProjectModal";
 import { createProject, projects } from "./createProject";
 import { renderToSidebar } from "./sidebarRender";
