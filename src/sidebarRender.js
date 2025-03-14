@@ -2,7 +2,7 @@ import { AddProjectBtnSelect, pageContainerSelect, submitProjectBtnSelect, sideb
 import { createProjectModal } from "./createProjectModal";
 import { createProject, projects } from "./createProject";
 import { renderProject } from "./projectLoader";
-import { toDoButton, toDoModal, removeToDoButton } from "./createToDoModal";
+import { toDoButton, toDoModal, removeToDoButton, removeToDoModal } from "./createToDoModal";
  
 // Responsible for rendering items to sidebar when projects are created
 // Allows user to click item, which is then expanded to center of page
@@ -25,6 +25,8 @@ export function renderToSidebar() {
         // We'll allow divs to be clickable here 
         projectDiv.addEventListener("click", () => {
             renderProject(index);
+            // Removes "To do" modal if exists
+            removeToDoModal();
             // Displays create project button
             removeToDoButton();
             toDoButton();
